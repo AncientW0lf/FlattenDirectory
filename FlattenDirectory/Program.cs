@@ -32,7 +32,7 @@ namespace FlattenDirectory
 				noErrors = false;
 				Console.WriteLine($"Error: {exc.Message}");
 			}
-			Console.WriteLine($"Finished operation with {(noErrors ? "no" : "")} errors.");
+			Console.WriteLine($"Finished operation with {(noErrors ? "no " : "")}errors.");
 		}
 	}
 }
