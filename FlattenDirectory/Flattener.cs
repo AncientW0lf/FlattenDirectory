@@ -29,6 +29,11 @@ namespace FlattenDirectory
 						filepath = newPath;
 					}
 				}
+
+				if(Directory.GetFiles(subfolders[i], "*.*", SearchOption.AllDirectories).Length > 0)
+					throw new IOException("There are still files in one or more subdirectories after flattening.");
+
+				Directory.Delete(subfolders[i], true);
 			}
 		}
 	}
